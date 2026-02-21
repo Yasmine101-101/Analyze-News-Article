@@ -47,10 +47,10 @@ most_common_word = identify_most_common_word(text)
 print(f"The most common word: {most_common_word} ")
 
 avarage_lenght = calculate_average_word_length(text)
-print(f"The avarage word lenght is :{avarage_lenght}")
+print(f"The avarage word length is :{avarage_lenght}")
 
-paraghraph_count = count_paragraphs(text)
-print(f"The number of paragraphs:{paraghraph_count}")
+paragraph_count = count_paragraphs(text)
+print(f"The number of paragraphs:{paragraph_count}")
 
 sentence_count = count_sentences(text)
 print(f"The number of sentences :{sentence_count}")
