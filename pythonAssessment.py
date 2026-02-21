@@ -32,9 +32,12 @@ def count_paragraphs(text):
     paragraphs = [p for p in text.split("\n\n") if p.strip()]
     return len(paragraphs)
     
-def count_sentences(str):
-    pass
-
+def count_sentences(text):
+    if not text:
+        return 1
+    sentences = re.findall(r"[.!?]", text)
+    return len(sentences)
+    
 text = open("article.txt").read()
 search_word = input("Enter the word you want to search for :  ")
 result_word = count_specific_word(text, search_word)
@@ -48,3 +51,6 @@ print(f"The avarage word lenght is :{avarage_lenght}")
 
 paraghraph_count = count_paragraphs(text)
 print(f"The number of paragraphs:{paraghraph_count}")
+
+sentence_count = count_sentences(text)
+print(f"The number of sentences :{sentence_count}")
